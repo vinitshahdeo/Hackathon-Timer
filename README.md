@@ -1,4 +1,4 @@
-![hackathon](./images/hacklogo.png)
+![hackathon](./hack.png)
 <p align="center"><img src="./countdown.gif"/></p>
 
 <p align="center">
