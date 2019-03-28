@@ -7,3 +7,9 @@
 ![grid-vinhack](./images/hackuser.png)
 
 ![LEARN MORE](./images/hackabout.png)
+
+![hackathon](./images/hackvector.png)
+
+![idea](./images/hackathonidea.png)
+
+![porotype](./images/prototype.png)
