@@ -25,6 +25,8 @@ This is basic timer which I've made for [VinHack](). It shows the notifications 
 
 ### Quick Start
 
+[![GitHub API](https://img.shields.io/badge/GitHub-API-teal.svg?style=flat&logo=github)](https://developer.github.com/v3/)
+
 Do the following changes in `index.html`
 
 ```javascript
@@ -42,3 +44,7 @@ var settings = {
 ```
 
 and here you go!
+
+> Learn more about [GitHub API](https://developer.github.com/v3/).
+
+> Check out the offical [website](https://vinhack.vinnovateit.com/) of [VinHack](https://vinhack.hackerearth.com/).
