@@ -14,10 +14,10 @@ My contribution includes :
   
   <strong>
   <ul>
-    <li>Monitoring the development of <a href="">website</a></li>
-    <li>Developed <a href="">go to place</a> for the participants</li>
-    <li>Created <a href="">quiz contest</a> for the participants</li>
-    <li>Made <a href="">problem statements</a></li>
+    <li>Monitoring the development of <a href="https://vinnovateit.com/">website</a></li>
+    <li>Developed <a href="https://vinnovateit.github.io/VinHack/">go to place</a> for the participants</li>
+    <li>Created <a href="https://docs.google.com/presentation/d/1ewAEOn5QIVFbRP7Ap4JJst_PrfJu6nxCIn28AhWpoiU/edit?usp=sharing">quiz contest</a> for the participants</li>
+    <li>Made <a href="https://drive.google.com/file/d/140W1UBMBeuhdIZoxHa3xjUVNwkaa1Yzr/view?usp=sharing">problem statements</a></li>
   </ul>
 </p></strong>
 
