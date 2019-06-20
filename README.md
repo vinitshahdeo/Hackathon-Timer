@@ -23,6 +23,22 @@ My contribution includes :
 
 This is basic timer which I've made for [VinHack](). It shows the notifications for the commits made on [VinnovateIT GitHub Organization](). This helps in boosting the energy of participants. If you're organizing a hackathon, you can use this! Just change the the url below with your organization's `url` and here you go!
 
+### Quick Start
 
+Do the following changes in `index.html`
 
-![grid-vinhack](./images/hackuser.png)
+```javascript
+
+var settings = {
+         "async": true,
+         "crossDomain": true,
+         // replace your org username below
+         "url": "https://api.github.com/orgs/vinnovateit/events",
+         "method": "GET",
+         "headers": {
+             "Authorization": "XXXXXXXXXXXXXXXXXXX" // replace this with your token
+          }
+
+```
+
+and here you go!
