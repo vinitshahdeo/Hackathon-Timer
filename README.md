@@ -8,7 +8,7 @@
 
 <h3 align="center">About VinHack</h3>
 
-<p align="justify"><a href="https://vinhack.hackerearth.com/">VinHack</a> was a hackathon ogranized by <a href="https://vinnovateit.com/">VinnovateIT</a> at <a href="http://www.vit.ac.in/">VIT Vellore</a>. The organizing team was led by <a href="https://github.com/ShreyaAnand">Shreya Anand</a>, President of <a href="https://vinnovateit.com/">VinnovateIT</a>. I had honour of being a member of <a href="https://vinhack.hackerearth.com/">judge</a> panel. That was great experience for me. 
+<p align="justify"><a href="https://vinhack.hackerearth.com/">VinHack</a> was a hackathon ogranized by <a href="https://vinnovateit.com/">VinnovateIT</a> at <a href="http://www.vit.ac.in/">VIT Vellore</a>. The organizing team was led by <a href="https://github.com/ShreyaAnand">Shreya Anand</a>, President of <a href="https://vinnovateit.com/">VinnovateIT</a>. I had honour of being a member of <a href="https://vinhack.hackerearth.com/challenges/hackathon/vinhack/judges/#judges">judge</a> panel. That was great experience for me. 
   
 My contribution includes :
   
