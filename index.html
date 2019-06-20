@@ -1,0 +1,484 @@
+<!--
+
+
+ __     __  __            __    __                      __                                                       
+/  |   /  |/  |          /  |  /  |                    /  |                                                      
+$$ |   $$ |$$/  _______  $$ |  $$ |  ______    _______ $$ |   __                                                 
+$$ |   $$ |/  |/       \ $$ |__$$ | /      \  /       |$$ |  /  |                                                
+$$  \ /$$/ $$ |$$$$$$$  |$$    $$ | $$$$$$  |/$$$$$$$/ $$ |_/$$/                                                 
+ $$  /$$/  $$ |$$ |  $$ |$$$$$$$$ | /    $$ |$$ |      $$   $$<                                                  
+  $$ $$/   $$ |$$ |  $$ |$$ |  $$ |/$$$$$$$ |$$ \_____ $$$$$$  \                                                 
+   $$$/    $$ |$$ |  $$ |$$ |  $$ |$$    $$ |$$       |$$ | $$  |                                                
+    $/     $$/ $$/   $$/ $$/   $$/  $$$$$$$/  $$$$$$$/ $$/   $$/                                                 
+                                                                                                                 
+                                                                                                                 
+                                                                                                                 
+                                                                                                                 
+                                                                                                                 
+                                                                                                                 
+                                                                                                                 
+                                                                                                                 
+                                                                                                                 
+                                                                                                                 
+                                                                                                                 
+                                                                                                                 
+                                                                                                                 
+                                                                                                                 
+                                                                                                                 
+ __    __                      __                    __      __                                                  
+/  |  /  |                    /  |                  /  |    /  |                                                 
+$$ |  $$ |  ______    _______ $$ |   __   ______   _$$ |_   $$ |____    ______   _______                         
+$$ |__$$ | /      \  /       |$$ |  /  | /      \ / $$   |  $$      \  /      \ /       \                        
+$$    $$ | $$$$$$  |/$$$$$$$/ $$ |_/$$/  $$$$$$  |$$$$$$/   $$$$$$$  |/$$$$$$  |$$$$$$$  |                       
+$$$$$$$$ | /    $$ |$$ |      $$   $$<   /    $$ |  $$ | __ $$ |  $$ |$$ |  $$ |$$ |  $$ |                       
+$$ |  $$ |/$$$$$$$ |$$ \_____ $$$$$$  \ /$$$$$$$ |  $$ |/  |$$ |  $$ |$$ \__$$ |$$ |  $$ |                       
+$$ |  $$ |$$    $$ |$$       |$$ | $$  |$$    $$ |  $$  $$/ $$ |  $$ |$$    $$/ $$ |  $$ |                       
+$$/   $$/  $$$$$$$/  $$$$$$$/ $$/   $$/  $$$$$$$/    $$$$/  $$/   $$/  $$$$$$/  $$/   $$/                        
+                                                                                                                 
+                                                                                                                 
+                                                                                                                 
+ _______                                                                                                         
+/       \                                                                                                        
+$$$$$$$  | __    __                                                                                              
+$$ |__$$ |/  |  /  |                                                                                             
+$$    $$< $$ |  $$ |                                                                                             
+$$$$$$$  |$$ |  $$ |                                                                                             
+$$ |__$$ |$$ \__$$ |                                                                                             
+$$    $$/ $$    $$ |                                                                                             
+$$$$$$$/   $$$$$$$ |                                                                                             
+          /  \__$$ |                                                                                             
+          $$    $$/                                                                                              
+           $$$$$$/                                                                                               
+ __     __  __                                                      __                ______  ________           
+/  |   /  |/  |                                                    /  |              /      |/        |          
+$$ |   $$ |$$/  _______   _______    ______   __     __  ______   _$$ |_     ______  $$$$$$/ $$$$$$$$/           
+$$ |   $$ |/  |/       \ /       \  /      \ /  \   /  |/      \ / $$   |   /      \   $$ |     $$ |             
+$$  \ /$$/ $$ |$$$$$$$  |$$$$$$$  |/$$$$$$  |$$  \ /$$/ $$$$$$  |$$$$$$/   /$$$$$$  |  $$ |     $$ |             
+ $$  /$$/  $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ | $$  /$$/  /    $$ |  $$ | __ $$    $$ |  $$ |     $$ |             
+  $$ $$/   $$ |$$ |  $$ |$$ |  $$ |$$ \__$$ |  $$ $$/  /$$$$$$$ |  $$ |/  |$$$$$$$$/  _$$ |_    $$ |             
+   $$$/    $$ |$$ |  $$ |$$ |  $$ |$$    $$/    $$$/   $$    $$ |  $$  $$/ $$       |/ $$   |   $$ |             
+    $/     $$/ $$/   $$/ $$/   $$/  $$$$$$/      $/     $$$$$$$/    $$$$/   $$$$$$$/ $$$$$$/    $$/              
+                                                                                                                 
+                                                                                                                 
+                                                                                                                 
+                                                                                                                 
+                                                                                                                 
+                                                                                                                 
+                                                                                                                 
+                                                                                                                 
+                                                                                                                 
+                                                                                                                 
+                                                                                                                 
+                                                                                                                 
+                                                                                                                 
+                                                                                                                 
+                                                                                                                 
+ __    __                      __              __       __  __    __      __              __    __            __ 
+/  |  /  |                    /  |            /  |  _  /  |/  |  /  |    /  |            /  |  /  |          /  |
+$$ |  $$ |  ______    _______ $$ |   __       $$ | / \ $$ |$$/  _$$ |_   $$ |____        $$ |  $$ |  _______ $$ |
+$$ |__$$ | /      \  /       |$$ |  /  |      $$ |/$  \$$ |/  |/ $$   |  $$      \       $$ |  $$ | /       |$$ |
+$$    $$ | $$$$$$  |/$$$$$$$/ $$ |_/$$/       $$ /$$$  $$ |$$ |$$$$$$/   $$$$$$$  |      $$ |  $$ |/$$$$$$$/ $$ |
+$$$$$$$$ | /    $$ |$$ |      $$   $$<        $$ $$/$$ $$ |$$ |  $$ | __ $$ |  $$ |      $$ |  $$ |$$      \ $$/ 
+$$ |  $$ |/$$$$$$$ |$$ \_____ $$$$$$  \       $$$$/  $$$$ |$$ |  $$ |/  |$$ |  $$ |      $$ \__$$ | $$$$$$  | __ 
+$$ |  $$ |$$    $$ |$$       |$$ | $$  |      $$$/    $$$ |$$ |  $$  $$/ $$ |  $$ |      $$    $$/ /     $$/ /  |
+$$/   $$/  $$$$$$$/  $$$$$$$/ $$/   $$/       $$/      $$/ $$/    $$$$/  $$/   $$/        $$$$$$/  $$$$$$$/  $$/ 
+                                                                                                                 
+                                                                                                                 
+                                                                                                                 
+-->
+<!DOCTYPE html>
+<html lang="en" >
+   <head>
+      <meta charset="UTF-8">
+      <meta name="author" content="Vinit Shahdeo">
+      <title>VinHack - VIT Vellore</title>
+      <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Varela" rel="stylesheet">
+      <link rel="shortcut icon" type="image/jpeg" href="./favicon.jpeg">
+      <link rel="stylesheet" href="css/style.css">
+      <style>
+         .custom-social-proof {
+         position: fixed;
+         bottom: 20px;
+         left: 20px;
+         z-index: 9999999999999 !important;
+         /*font-family: 'Montserrat', sans-serif;*/
+         font-family: 'Varela', sans-serif;
+         display: none;  /* Uncoment This Line to Hide Initially*/
+         .custom-notification {
+         width: 820px;
+         border: 0;
+         text-align: left;
+         z-index: 99999;
+         box-sizing: border-box;
+         font-weight: 400;
+         border-radius: 6px;
+         box-shadow: 2px 2px 10px 2px hsla(0, 4%, 4%, 0.2);
+         background-color: #fff;
+         position: relative;
+         cursor: pointer;
+         .custom-notification-container {
+         display: flex !important;
+         align-items: center;
+         height: 100px;
+         .custom-notification-image-wrapper {
+         img {
+         max-height: 75px;
+         width: 90px;
+         overflow: hidden;
+         border-radius: 6px 0 0 6px;
+         object-fit: cover;
+         }
+         }
+         .custom-notification-content-wrapper {
+         margin: 0;
+         height: 100%;
+         color: gray;
+         padding-left: 20px;
+         padding-right: 20px;
+         border-radius: 0 6px 6px 0;
+         flex: 1;
+         display: flex !important;
+         flex-direction: column;
+         justify-content: center;
+         .custom-notification-content {
+         font-family: inherit !important;
+         margin: 0 !important;
+         padding: 0 !important;
+         font-size: 24px;
+         line-height: 16px;
+         small {
+         margin-top: 3px !important;
+         display: block !important;
+         font-size: 12px !important;
+         opacity: .8;
+         }
+         }
+         }
+         }
+         .custom-close {
+         position: absolute;
+         top: 8px;
+         right: 8px;
+         height: 12px;
+         width: 12px;
+         cursor: pointer;
+         transition: .2s ease-in-out;
+         transform: rotate(45deg);
+         opacity: 0;
+         &::before {
+         content: "";
+         display: block;
+         width: 100%;
+         height: 2px;
+         background-color: gray;
+         position: absolute;
+         left: 0;
+         top: 5px;
+         }
+         &::after {
+         content: "";
+         display: block;
+         height: 100%;
+         width: 2px;
+         background-color: gray;
+         position: absolute;
+         left: 5px;
+         top: 0;
+         }
+         }
+         &:hover {
+         .custom-close {
+         opacity: 1;
+         }
+         }
+         }
+         }
+         h1{
+         font-size: 64px;
+         }
+         h1 strong{
+         font-weight: 900
+         }
+         .typing-text::after {
+         content: "|";
+         animation: blink ease 1s infinite;
+         }
+         @keyframes blink {
+         0%, 100% {
+         opacity: 0;
+         } 50% {
+         opacity: 1;
+         }
+         }
+         .ideas{
+         overflow: hidden;
+         position: fixed;
+         top: 70px;
+         font-family: 'Russo One', sans-serif;
+         font-size: 50px;
+         width: 100%
+         }
+         .username {
+         color: #de4848;
+         font-weight: bold;
+         }
+         .reponame{
+         text-transform: uppercase;
+         font-weight: 900;
+         }
+      </style>
+      <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+   </head>
+   <body>
+      <h1 class="ideas typing-text">Hack with Us!</h1>
+      <div class="wrap">
+         <h1><strong>VinHack</strong> | VinnovateIT</h1>
+         <div class="countdown">
+            <div class="bloc-time hours" data-init-value="0">
+               <span class="count-title">Hours</span>
+               <div class="figure hours hours-1">
+                  <span class="top">2</span>
+                  <span class="top-back">
+                  <span>2</span>
+                  </span>
+                  <span class="bottom">2</span>
+                  <span class="bottom-back">
+                  <span>2</span>
+                  </span>
+               </div>
+               <div class="figure hours hours-2">
+                  <span class="top">4</span>
+                  <span class="top-back">
+                  <span>4</span>
+                  </span>
+                  <span class="bottom">4</span>
+                  <span class="bottom-back">
+                  <span>4</span>
+                  </span>
+               </div>
+            </div>
+            <div class="bloc-time min" data-init-value="0">
+               <span class="count-title">Minutes</span>
+               <div class="figure min min-1">
+                  <span class="top">0</span>
+                  <span class="top-back">
+                  <span>0</span>
+                  </span>
+                  <span class="bottom">0</span>
+                  <span class="bottom-back">
+                  <span>0</span>
+                  </span>        
+               </div>
+               <div class="figure min min-2">
+                  <span class="top">0</span>
+                  <span class="top-back">
+                  <span>0</span>
+                  </span>
+                  <span class="bottom">0</span>
+                  <span class="bottom-back">
+                  <span>0</span>
+                  </span>
+               </div>
+            </div>
+            <div class="bloc-time sec" data-init-value="0">
+               <span class="count-title">Seconds</span>
+               <div class="figure sec sec-1">
+                  <span class="top">0</span>
+                  <span class="top-back">
+                  <span>0</span>
+                  </span>
+                  <span class="bottom">0</span>
+                  <span class="bottom-back">
+                  <span>0</span>
+                  </span>          
+               </div>
+               <div class="figure sec sec-2">
+                  <span class="top">0</span>
+                  <span class="top-back">
+                  <span>0</span>
+                  </span>
+                  <span class="bottom">0</span>
+                  <span class="bottom-back">
+                  <span>0</span>
+                  </span>
+               </div>
+            </div>
+         </div>
+      </div>
+      <section class="custom-social-proof">
+         <div class="custom-notification">
+            <div class="custom-notification-container">
+               <div class="custom-notification-image-wrapper" id="githubavatar">
+                  <img src="https://avatars0.githubusercontent.com/u/20594326?v=4">
+               </div>
+               <div class="custom-notification-content-wrapper" id="githubnotification">
+                  <p class="custom-notification-content" >
+                     Last commit by Vinit Shahdeo on VinnovateIT repository!
+                     <small>1 hour ago</small>
+                  </p>
+               </div>
+            </div>
+            <div class="custom-close"></div>
+         </div>
+      </section>
+      <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js'></script>
+      <script  src="js/index.js"></script>
+      <script>
+         setInterval(function(){ githubNotifications();$(".custom-social-proof").stop().slideToggle('slow'); }, 8000);
+         $(".custom-close").click(function() {
+           $(".custom-social-proof").stop().slideToggle('slow');
+         });
+      </script>
+      <script>
+         function githubNotifications(){
+         var settings = {
+         "async": true,
+         "crossDomain": true,
+         "url": "https://api.github.com/orgs/vinnovateit/events",
+         "method": "GET",
+         "headers": {
+            // Add token for authorized requests
+            // "Authorization": "XXXXXXXXXXXXXXXXXXX"
+          }
+         }
+         
+         $.ajax(settings).done(function (response) {
+         console.log(response);
+         var repoName = response[0].repo.name;
+         repoName = repoName.split('/');
+         repoName = repoName[1];
+         var options = {
+         "async": true,
+         "crossDomain": true,
+         "url": response[0].actor.url,
+         "method": "GET",
+         "headers": {
+            // Add token for authorized requests
+            // "Authorization": "XXXXXXXXXXXXXXXX"
+          }
+         }
+         
+         $.ajax(options).done(function (res) {
+         console.log(res);
+         $('#githubavatar').html('<img src="'+res.avatar_url+'">');
+         var name;
+         if(res.name == null || res.name == ""){
+           name = res.login
+         }
+         else{
+           name = res.name;
+         }
+         var lastUpdated = res.created_at;
+         lastUpdated = lastUpdated.split('-');
+         lastUpdated = lastUpdated[2].substr(3,8);
+         var dateobj = new Date();
+         var B = dateobj.toISOString();
+         console.log(B);
+         $('#githubnotification').html("<p class='custom-notification-content'>Last commit by <span class='username'>"+name+"</span> in <span class='username reponame'>"+ repoName+"</span><small>"+lastUpdated+"</p>")
+         });
+         
+         });
+         }
+      </script>
+      <script>
+         const text = document.querySelector('.typing-text');
+         
+         // make a words array
+         const words = [
+         "Ideas.",
+         "Innovation.",
+         "Development.",
+         "Hackathon."
+         ];
+         
+         // start typing effect
+         setTyper(text, words);
+         
+         function setTyper(element, words) {
+         
+         const LETTER_TYPE_DELAY = 75;
+         const WORD_STAY_DELAY = 2000;
+         
+         const DIRECTION_FORWARDS = 0;
+         const DIRECTION_BACKWARDS = 1;
+         
+         var direction = DIRECTION_FORWARDS;
+         var wordIndex = 0;
+         var letterIndex = 0;
+         
+         var wordTypeInterval;
+         
+         startTyping();
+         
+         function startTyping() {
+           wordTypeInterval = setInterval(typeLetter, LETTER_TYPE_DELAY);
+         }
+         
+         function typeLetter() {
+           const word = words[wordIndex];
+         
+           if (direction == DIRECTION_FORWARDS) {
+             letterIndex++;
+         
+             if (letterIndex == word.length) {
+               direction = DIRECTION_BACKWARDS;
+               clearInterval(wordTypeInterval);
+               setTimeout(startTyping, WORD_STAY_DELAY);
+             }
+         
+           } else if (direction == DIRECTION_BACKWARDS) {
+             letterIndex--;
+         
+             if (letterIndex == 0) {
+               nextWord();
+             }
+           }
+         
+           const textToType = word.substring(0, letterIndex);
+         
+           element.textContent = textToType;
+         }
+         
+         function nextWord() {
+         
+           letterIndex = 0;
+           direction = DIRECTION_FORWARDS;
+           wordIndex++;
+         
+           if (wordIndex == words.length) {
+             wordIndex = 0;
+           }
+         
+         }
+         }
+         
+      </script>
+      
+   </body>
+<!---
+
+
+___  ___          _                 _ _   _       _                           
+|  \/  |         | |               (_) | | |     | |                          
+| .  . | __ _  __| | ___  __      ___| |_| |__   | | _____   _____            
+| |\/| |/ _` |/ _` |/ _ \ \ \ /\ / / | __| '_ \  | |/ _ \ \ / / _ \           
+| |  | | (_| | (_| |  __/  \ V  V /| | |_| | | | | | (_) \ V /  __/           
+\_|  |_/\__,_|\__,_|\___|   \_/\_/ |_|\__|_| |_| |_|\___/ \_/ \___|           
+                                                                              
+                                                                              
+ _             _   _ _       _ _     _____ _           _         _            
+| |           | | | (_)     (_) |   /  ___| |         | |       | |           
+| |__  _   _  | | | |_ _ __  _| |_  \ `--.| |__   __ _| |__   __| | ___  ___  
+| '_ \| | | | | | | | | '_ \| | __|  `--. \ '_ \ / _` | '_ \ / _` |/ _ \/ _ \ 
+| |_) | |_| | \ \_/ / | | | | | |_  /\__/ / | | | (_| | | | | (_| |  __/ (_) |
+|_.__/ \__, |  \___/|_|_| |_|_|\__| \____/|_| |_|\__,_|_| |_|\__,_|\___|\___/ 
+        __/ |                                                                 
+       |___/                                                                  
+
+-->
+</html>
