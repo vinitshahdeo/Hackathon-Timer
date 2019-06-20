@@ -48,3 +48,24 @@ and here you go!
 > Learn more about [GitHub API](https://developer.github.com/v3/).
 
 > Check out the offical [website](https://vinhack.vinnovateit.com/) of [VinHack](https://vinhack.hackerearth.com/).
+
+### Thanks!
+
+```javascript
+
+
+   ________          __   __                    
+  / ____/ /___ _____/ /  / /_____               
+ / / __/ / __ `/ __  /  / __/ __ \              
+/ /_/ / / /_/ / /_/ /  / /_/ /_/ /              
+\__________,_____,_/   \__/\____/               
+  / ___/ _ \/ _ \                               
+ (__  )  __/  __/        __                   __
+/____/\__________  __   / /_  ___  ________  / /
+  / / / / __ \/ / / /  / __ \/ _ \/ ___/ _ \/ / 
+ / /_/ / /_/ / /_/ /  / / / /  __/ /  /  __/_/  
+ \__, /\____/\__,_/  /_/ /_/\___/_/   \___(_)   
+/____/                                          
+
+
+```
