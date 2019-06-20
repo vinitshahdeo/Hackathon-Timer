@@ -3,12 +3,12 @@
 
 <p align="center">
 <h1 align="center"> Hackathon Timer<br>
-<a href="">VinHack</a> - <a href="">VinnovateIT</a></h1>
-<h2 align="center"> A timer for Hackathon with <a href="">GitHub Live Updates</a>.<br> Made this for <a href="">VinHack</a> - a hackathon by <a href="">VinnovateIT</a></h2>
+<a href="https://vinhack.hackerearth.com/">VinHack</a> - <a href="https://vinnovateit.com/">VinnovateIT</a></h1>
+<h2 align="center"> A timer for Hackathon with <a href="http://githublookbook.com/VinHack/">GitHub Live Updates</a>.<br> Made this for <a href="https://vinhack.hackerearth.com/">VinHack</a> - a hackathon by <a href="https://vinnovateit.com/">VinnovateIT</a></h2>
 
 <h3 align="center">About VinHack</h3>
 
-<p align="justify"><a href="">VinHack</a> was a hackathon ogranized by <a href="">VinnovateIT</a> at <a href="">VIT Vellore</a>. The organizing team was led by <a href="">Shreya Anand</a>, President of <a href="">VinnovateIT</a>. I had honour of being a member of <a href="">judge</a> panel. That was great experience for me. 
+<p align="justify"><a href="https://vinhack.hackerearth.com/">VinHack</a> was a hackathon ogranized by <a href="https://vinnovateit.com/">VinnovateIT</a> at <a href="http://www.vit.ac.in/">VIT Vellore</a>. The organizing team was led by <a href="https://github.com/ShreyaAnand">Shreya Anand</a>, President of <a href="https://vinnovateit.com/">VinnovateIT</a>. I had honour of being a member of <a href="https://vinhack.hackerearth.com/">judge</a> panel. That was great experience for me. 
   
 My contribution includes :
   
