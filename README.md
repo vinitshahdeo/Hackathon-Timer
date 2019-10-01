@@ -1,73 +1,51 @@
-![hackathon](./hack.png)
-<p align="center"><img src="./countdown.gif"/></p>
+hackathon
 
-<p align="center">
-<h1 align="center"> Hackathon Timer<br>
-<a href="https://vinhack.hackerearth.com/">VinHack</a> - <a href="https://vinnovateit.com/">VinnovateIT</a></h1>
-<h2 align="center"> A timer for Hackathon with <a href="http://githublookbook.com/VinHack/">GitHub Live Updates</a>.<br> Made this for <a href="https://vinhack.hackerearth.com/">VinHack</a> - a hackathon by <a href="https://vinnovateit.com/">VinnovateIT</a></h2>
+Hackathon Timer
+VinHack - VinnovateIT
+Um cronômetro para Hackathon com atualizações ao vivo do GitHub.
+Feito isso para VinHack - um hackathon por VinnovateIT
+Sobre o VinHack
+VinHack foi uma hackathon organizada por VinnovateIT no VIT Vellore. A equipe organizadora foi liderada por Shreya Anand, presidente da VinnovateIT. Tive a honra de ser membro do painel de juízes. Essa foi uma ótima experiência para mim.
 
-<h3 align="center">About VinHack</h3>
+Minha contribuição inclui:
 
-<p align="justify"><a href="https://vinhack.hackerearth.com/">VinHack</a> was a hackathon ogranized by <a href="https://vinnovateit.com/">VinnovateIT</a> at <a href="http://www.vit.ac.in/">VIT Vellore</a>. The organizing team was led by <a href="https://github.com/ShreyaAnand">Shreya Anand</a>, President of <a href="https://vinnovateit.com/">VinnovateIT</a>. I had honour of being a member of <a href="https://vinhack.hackerearth.com/challenges/hackathon/vinhack/judges/#judges">judge</a> panel. That was great experience for me. 
-  
-My contribution includes :
-  
-  <strong>
-  <ul>
-    <li>Monitoring the development of <a href="https://vinnovateit.com/">website</a></li>
-    <li>Developed <a href="https://vinnovateit.github.io/VinHack/">go to place</a> for the participants</li>
-    <li>Created <a href="https://docs.google.com/presentation/d/1ewAEOn5QIVFbRP7Ap4JJst_PrfJu6nxCIn28AhWpoiU/edit?usp=sharing">quiz contest</a> for the participants</li>
-    <li>Made <a href="https://drive.google.com/file/d/140W1UBMBeuhdIZoxHa3xjUVNwkaa1Yzr/view?usp=sharing">problem statements</a></li>
-  </ul>
-</p></strong>
+Monitorando o desenvolvimento do site
+Desenvolvido ir para o lugar para os participantes
+Criou um concurso para os participantes
+Declarações de problemas feitos
+Este é o cronômetro básico que eu criei para o VinHack. Ele mostra as notificações para os commits feitos na organização VinnovateIT GitHub. Isso ajuda a aumentar a energia dos participantes. Se você está organizando uma hackathon, pode usar isso! Basta alterar o URL abaixo com o URL da sua organização e pronto!
 
-This is basic timer which I've made for [VinHack](). It shows the notifications for the commits made on [VinnovateIT GitHub Organization](). This helps in boosting the energy of participants. If you're organizing a hackathon, you can use this! Just change the the url below with your organization's `url` and here you go!
+Confira a demonstração ao vivo aqui!
+Começo rápido
+API do GitHub
 
-### Check out the live demo [here](http://githublookbook.com/VinHack/)!
-
-### Quick Start
-
-[![GitHub API](https://img.shields.io/badge/GitHub-API-teal.svg?style=flat&logo=github)](https://developer.github.com/v3/)
-
-Do the following changes in `index.html`
-
-```javascript
+Faça as seguintes alterações no index.html
 
 var settings = {
-         "async": true,
-         "crossDomain": true,
-         // replace your org username below
-         "url": "https://api.github.com/orgs/vinnovateit/events",
-         "method": "GET",
-         "headers": {
-             "Authorization": "XXXXXXXXXXXXXXXXXXX" // replace this with your token
-          }
+         "assíncrono": verdadeiro,
+         "crossDomain": true,
+         // substitua seu nome de usuário organizacional abaixo
+         "url": "https://api.github.com/orgs/vinnovateit/events",
+         "method": "GET",
+         "cabeçalhos": {
+             "Autorização": "XXXXXXXXXXXXXXXXXXX" // substitua-o pelo seu token
+          }
+e aqui vai você!
 
-```
+Saiba mais sobre a API do GitHub.
 
-and here you go!
+Confira o site oficial do VinHack.
 
-> Learn more about [GitHub API](https://developer.github.com/v3/).
-
-> Check out the offical [website](https://vinhack.vinnovateit.com/) of [VinHack](https://vinhack.hackerearth.com/).
-
-### Thanks!
-
-```javascript
-
-
-   ________          __   __                    
-  / ____/ /___ _____/ /  / /_____               
- / / __/ / __ `/ __  /  / __/ __ \              
-/ /_/ / / /_/ / /_/ /  / /_/ /_/ /              
-\__________,_____,_/   \__/\____/               
-  / ___/ _ \/ _ \                               
- (__  )  __/  __/        __                   __
-/____/\__________  __   / /_  ___  ________  / /
-  / / / / __ \/ / / /  / __ \/ _ \/ ___/ _ \/ / 
- / /_/ / /_/ / /_/ /  / / / /  __/ /  /  __/_/  
- \__, /\____/\__,_/  /_/ /_/\___/_/   \___(_)   
-/____/                                          
-
-
-```
+Obrigado!
+   __________
+  / ____ / / ___ _____ / / / / _____
+ / / __ / / __ `/ __ / / __ / __ \
+/ / _ / / / / _ / / _ / / / / _ / / _ / /
+\ __________, _____, _ / \ __ / \ ____ /
+  / ___ / _ \ / _ \
+ (__) __ / __ / __ __
+/ ____ / \ __________ __ / / _ ___ ________ / /
+  / / / / __ \ / / / / / __ \ / _ \ / ___ / _ \ / /
+ / / _ / / / _ / / / _ / / / / / / __ / / / __ / _ /
+ \ __, / \ ____ / \ __, _ / / _ / / _ / \ ___ / _ / \ ___ (_)
+/ ____ /
