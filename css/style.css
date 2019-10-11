@@ -154,8 +154,9 @@ h2 strong {
 }
 
 .countdown {
-  width: 720px;
+  width: 975px;
   margin: 0 auto;
+  text-align: center;
 }
 .countdown .bloc-time {
   float: left;

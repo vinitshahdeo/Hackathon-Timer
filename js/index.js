@@ -1,11 +1,13 @@
 //var hackStart = new Date(2019, 1, 4, 8, 30, 0);
 //var hackEnd = new Date(2019, 1, 5, 8, 30, 0);
-var hackStart = moment([2019, 2, 20, 8, 30, 0]);
-var hackEnd = moment([2019, 8, 23, 8, 30, 0]);
+var hackStart = moment([2019, 9, 1, 8, 30, 0]);
+var hackEnd = moment([2019, 9, 31, 8, 30, 0]);
 
-function setDOMTime(hours, min, sec) {
-  console.log('setting timer for: ', hours, min, sec);
+
+function setDOMTime(days, hours, min, sec) {
+  console.log('setting timer for: ', days, hours, min, sec);
   var el = $('.countdown');
+  el.find('.bloc-time.days').attr('data-init-value', days);
   el.find('.bloc-time.hours').attr('data-init-value', hours);
   el.find('.bloc-time.min').attr('data-init-value', min);
   el.find('.bloc-time.sec').attr('data-init-value', sec);
@@ -20,7 +22,7 @@ function setInitialTime() {
     clearInterval(counter);
     // initialize time in DOM with "now".
     var diff = moment.duration(hackEnd.diff(now));
-    setDOMTime(diff.hours(), diff.minutes(), diff.seconds());
+    setDOMTime(diff.days(), diff.hours(), diff.minutes(), diff.seconds());
     // Start countdown
     Countdown.init();
   } else if (now.diff(hackEnd) > 0) {
@@ -28,34 +30,35 @@ function setInitialTime() {
     clearInterval(counter);
     // Reset DOM to 00.
     console.log('Hackathon Completed.');
-    setDOMTime(0, 0, 1);
+    setDOMTime(0, 0, 0, 1);
     // Init countdown
     Countdown.init();
   } else if (now.diff(hackStart) < 0) {
     // Reset DOM to 24.
     console.log('Hackathon Not Started.');
-    setDOMTime(24, 0, 0);
+    setDOMTime(0, 24, 0, 0);
   }
 }
 
 
 var counter = setInterval(setInitialTime, 1000);
-    
+
 // Create Countdown
 var Countdown = {
-  
+
   // Backbone-like structure
   $el: $('.countdown'),
-  
+
   // Params
   countdown_interval: null,
   total_seconds     : 0,
-  
-  // Initialize the countdown  
+
+  // Initialize the countdown
   init: function() {
-    
+
     // DOM
 		this.$ = {
+      days   : this.$el.find('.bloc-time.days .figure'),
     	hours  : this.$el.find('.bloc-time.hours .figure'),
     	minutes: this.$el.find('.bloc-time.min .figure'),
     	seconds: this.$el.find('.bloc-time.sec .figure')
@@ -63,33 +66,36 @@ var Countdown = {
 
     // Init countdown values
     this.values = {
+        days  : this.$.days.parent().attr('data-init-value'),
 	      hours  : this.$.hours.parent().attr('data-init-value'),
         minutes: this.$.minutes.parent().attr('data-init-value'),
         seconds: this.$.seconds.parent().attr('data-init-value'),
     };
-    
-    // Initialize total seconds
-    this.total_seconds = this.values.hours * 60 * 60 + (this.values.minutes * 60) + this.values.seconds;
 
-    // Animate countdown to the end 
-    this.count();    
+    // Initialize total seconds
+    this.total_seconds = (this.values.days * 24) + (this.values.hours * 60 * 60) + (this.values.minutes * 60) + this.values.seconds;
+
+    // Animate countdown to the end
+    this.count();
   },
-  
+
   count: function() {
-    
+
     var that    = this,
+        $day_1 = this.$.days.eq(0),
+        $day_2 = this.$.days.eq(1),
         $hour_1 = this.$.hours.eq(0),
         $hour_2 = this.$.hours.eq(1),
         $min_1  = this.$.minutes.eq(0),
         $min_2  = this.$.minutes.eq(1),
         $sec_1  = this.$.seconds.eq(0),
         $sec_2  = this.$.seconds.eq(1);
-    
+
         this.countdown_interval = setInterval(function() {
 
         if(that.total_seconds > 0) {
 
-            --that.values.seconds;              
+            --that.values.seconds;
 
             if(that.values.minutes >= 0 && that.values.seconds < 0) {
 
@@ -104,6 +110,9 @@ var Countdown = {
             }
 
             // Update DOM values
+            // Days
+            that.checkDay(that.values.days, $day_1, $day_2);
+
             // Hours
             that.checkHour(that.values.hours, $hour_1, $hour_2);
 
@@ -118,11 +127,11 @@ var Countdown = {
         else {
             clearInterval(that.countdown_interval);
         }
-    }, 1000);    
+    }, 1000);
   },
-  
+
   animateFigure: function($el, value) {
-    
+
      var that         = this,
 		     $top         = $el.find('.top'),
          $bottom      = $el.find('.bottom'),
@@ -150,16 +159,15 @@ var Countdown = {
         }
     });
 
-    TweenMax.to($back_top, 0.8, { 
+    TweenMax.to($back_top, 0.8, {
         rotationX           : 0,
         transformPerspective: 300,
-	      ease                : Quart.easeOut, 
-        clearProps          : 'all' 
-    });    
+	      ease                : Quart.easeOut,
+        clearProps          : 'all'
+    });
   },
-  
-  checkHour: function(value, $el_1, $el_2) {
-    
+
+  checkDay: function(value, $el_1, $el_2) {
     var val_1       = value.toString().charAt(0),
         val_2       = value.toString().charAt(1),
         fig_1_value = $el_1.find('.top').html(),
@@ -176,6 +184,27 @@ var Countdown = {
         // If we are under 10, replace first figure with 0
         if(fig_1_value !== '0') this.animateFigure($el_1, 0);
         if(fig_2_value !== val_1) this.animateFigure($el_2, val_1);
-    }    
+    }
+  },
+
+  checkHour: function(value, $el_1, $el_2) {
+
+    var val_1       = value.toString().charAt(0),
+        val_2       = value.toString().charAt(1),
+        fig_1_value = $el_1.find('.top').html(),
+        fig_2_value = $el_2.find('.top').html();
+
+    if(value >= 10) {
+
+        // Animate only if the figure has changed
+        if(fig_1_value !== val_1) this.animateFigure($el_1, val_1);
+        if(fig_2_value !== val_2) this.animateFigure($el_2, val_2);
+    }
+    else {
+
+        // If we are under 10, replace first figure with 0
+        if(fig_1_value !== '0') this.animateFigure($el_1, 0);
+        if(fig_2_value !== val_1) this.animateFigure($el_2, val_1);
+    }
   }
 };
