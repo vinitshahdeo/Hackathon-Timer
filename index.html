@@ -488,31 +488,31 @@ $$/   $$/  $$$$$$$/  $$$$$$$/ $$/   $$/       $$/      $$/ $$/    $$$$/  $$/   $
              * is likely updated, so we can just poll that endpoint manually.
              */
 
-            githubNotifications();
+            pullGithubNotifications();
          });
 
          socket.on('commit_comment', function(payload) {
             console.log('a comment on a commit occurred.');
-            githubNotifications();
+            pullGithubNotifications();
          });
 
          socket.on('issue_comment', function(payload) {
             const action = payload.action;
             console.log(`a comment on an issue was ${action}.`);
-            githubNotifications();
+            pullGithubNotifications();
          });
 
          socket.on('issues', function(payload) {
             const action = payload.action;
             console.log(`an issue issue was ${action}.`);
-            githubNotifications();
+            pullGithubNotifications();
          });
 
          socket.on('pull_request', function(payload) {
             const action = payload.action;
             console.log(`a pull request was ${action}`);
 
-            githubNotifications();
+            pullGithubNotifications();
          });
 
       </script>
