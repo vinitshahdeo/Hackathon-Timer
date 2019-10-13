@@ -326,10 +326,17 @@ $$/   $$/  $$$$$$$/  $$$$$$$/ $$/   $$/       $$/      $$/ $$/    $$$$/  $$/   $
       </section>
       <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
       <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js'></script>
-      <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js'></script>      
       <script  src="js/index.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+
       <script>
-         setInterval(function(){ githubNotifications();$(".custom-social-proof").stop().slideToggle('slow'); }, 8000);
+         function pullGithubNotifications() {
+            githubNotifications();
+            $(".custom-social-proof").stop().slideToggle('slow');
+         }
+         setInterval(pullGithubNotifications, 8000);
+
          $(".custom-close").click(function() {
            $(".custom-social-proof").stop().slideToggle('slow');
          });
@@ -459,6 +466,56 @@ $$/   $$/  $$$$$$$/  $$$$$$$/ $$/   $$/       $$/      $$/ $$/    $$$$/  $$/   $
          
       </script>
       
+      <script>
+         var socket = io('localhost:3000'); // change path to where Webhook is running; do not include 'http'
+         /**
+          * 
+          * handle various webhook events:
+          * https://developer.github.com/webhooks/#events
+          * 
+          */
+         
+         socket.on('ping', function (payload) {
+            console.log('A ping event occurred. Not that important');
+         });
+
+
+         socket.on('push', function(payload) {
+            console.log('a new push event occurred. Payload:', payload);
+            /**
+             * At present, we don't have a formatter for these events; 
+             * but, if a webhook occurred, then the notification endpoint 
+             * is likely updated, so we can just poll that endpoint manually.
+             */
+
+            pullGithubNotifications();
+         });
+
+         socket.on('commit_comment', function(payload) {
+            console.log('a comment on a commit occurred.');
+            pullGithubNotifications();
+         });
+
+         socket.on('issue_comment', function(payload) {
+            const action = payload.action;
+            console.log(`a comment on an issue was ${action}.`);
+            pullGithubNotifications();
+         });
+
+         socket.on('issues', function(payload) {
+            const action = payload.action;
+            console.log(`an issue issue was ${action}.`);
+            pullGithubNotifications();
+         });
+
+         socket.on('pull_request', function(payload) {
+            const action = payload.action;
+            console.log(`a pull request was ${action}`);
+
+            pullGithubNotifications();
+         });
+
+      </script>
    </body>
 <!---
 

@@ -51,6 +51,25 @@ and here you go!
 
 > Check out the offical [website](https://vinhack.vinnovateit.com/) of [VinHack](https://vinhack.hackerearth.com/).
 
+
+### Node Server Webhook
+
+You can set up an optional Webhook in GitHub, which, upon any event occuring on that repository, will invoke the Github endpoitn mentioned above to be polled for new changes.
+
+For this functionality to work, you must:
+
+1. run `npm install` on the command line where you intend to run the Webhook listener.
+1. Set some env variables `HOST` and `PORT` for where the web page can be accessed from the public internet (eg, docker port forwards, router port forwards, etc).
+1. run `npm start` to ensure the server correctly runs.
+1. Update `index.html` to specify the accessible URL of the node server. `var socket = io('<your_server_address_here:port');`.
+1. Optionally, comment out (or increase) the `setInterval(..., 8000)` to decrease/disable polling interval.
+1. Once running, test it out by browsing to it's address in a browser.
+1. You'll receive the URL you should provide to the GitHub Webhooks API on your repository.
+1. Update the the repository URL with the Webhook address you copied. Ensure you set content-type to `application/json`, and ideally, send EVERYTHING. Secrets are not yet supported (requires separate ruby shared key setup *pull request welcome*).
+
+> Checkout the [GitHub Webhook API](https://developer.github.com/webhooks/).
+
+
 ### Thanks!
 
 ```javascript
