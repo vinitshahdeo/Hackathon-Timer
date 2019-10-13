@@ -65,7 +65,7 @@ For this functionality to work, you must:
 1. Optionally, comment out (or increase) the `setInterval(..., 8000)` to decrease/disable polling interval.
 1. Once running, test it out by browsing to it's address in a browser.
 1. You'll receive the URL you should provide to the GitHub Webhooks API on your repository.
-1. Update the the repository URL with the Webhook address you copied.
+1. Update the the repository URL with the Webhook address you copied. Ensure you set content-type to `application/json`, and ideally, send EVERYTHING. Secrets are not yet supported (requires separate ruby shared key setup *pull request welcome*).
 
 > Checkout the [GitHub Webhook API](https://developer.github.com/webhooks/).
 
