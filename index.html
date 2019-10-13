@@ -335,7 +335,7 @@ $$/   $$/  $$$$$$$/  $$$$$$$/ $$/   $$/       $$/      $$/ $$/    $$$$/  $$/   $
             githubNotifications();
             $(".custom-social-proof").stop().slideToggle('slow');
          }
-         setInterval(pullGithubNotifications, 8000);
+         // setInterval(pullGithubNotifications, 8000);
 
          $(".custom-close").click(function() {
            $(".custom-social-proof").stop().slideToggle('slow');
@@ -467,11 +467,7 @@ $$/   $$/  $$$$$$$/  $$$$$$$/ $$/   $$/       $$/      $$/ $$/    $$$$/  $$/   $
       </script>
       
       <script>
-         var socket = io('localhost:3000'); // change path to where Webhook is running.
-         socket.on('ping', function (payload) {
-            console.log('A ping event occurred. Not that important');
-         });
-
+         var socket = io('localhost:3000'); // change path to where Webhook is running; do not include 'http'
          /**
           * 
           * handle various webhook events:
@@ -479,10 +475,19 @@ $$/   $$/  $$$$$$$/  $$$$$$$/ $$/   $$/       $$/      $$/ $$/    $$$$/  $$/   $
           * 
           */
          
+         socket.on('ping', function (payload) {
+            console.log('A ping event occurred. Not that important');
+         });
+
+
          socket.on('push', function(payload) {
             console.log('a new push event occurred. Payload:', payload);
+            /**
+             * At present, we don't have a formatter for these events; 
+             * but, if a webhook occurred, then the notification endpoint 
+             * is likely updated, so we can just poll that endpoint manually.
+             */
 
-            // at present, we don't have a formatter for these events; but, if a webhook occurred, then the notification endpoint is likely updated.
             githubNotifications();
          });
 
