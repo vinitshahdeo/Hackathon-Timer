@@ -19,7 +19,7 @@ const log = (logContent) => console.log(`\x1b[1m ${Date().toLocaleString()} \x1b
 app.post('/payload', jsonParser, function (req, res) {
     log('received a webhook event:');
     console.log(req.headers);
-    
+
     const webhookType = req.headers['x-github-event'];
 
     switch (webhookType) {
@@ -35,7 +35,7 @@ app.post('/payload', jsonParser, function (req, res) {
     }
     
     io.emit(webhookType, {
-        payload: req.body.payload,
+        payload: req.body,
     });
     
     return res.status(200).json({ status: 'ok' });
