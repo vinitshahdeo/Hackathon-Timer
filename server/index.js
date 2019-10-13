@@ -17,7 +17,9 @@ app.get('/', function(req, res) {
 const log = (logContent) => console.log(`\x1b[1m ${Date().toLocaleString()} \x1b[0m: %s`, logContent)
 
 app.post('/payload', jsonParser, function (req, res) {
-    log('received a webhook event', req.headers);
+    log('received a webhook event:');
+    console.log(req.headers);
+    
     const webhookType = req.headers['x-github-event'];
 
     switch (webhookType) {
