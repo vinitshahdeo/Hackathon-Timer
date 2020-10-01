@@ -51,7 +51,7 @@ and here you go!
 
 > Check out the offical [website](https://vinhack.vinnovateit.com/) of [VinHack](https://vinhack.hackerearth.com/).
 
-### Thanks!
+### Thanks!!
 
 ```javascript
 
