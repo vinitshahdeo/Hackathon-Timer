@@ -4,26 +4,26 @@
 <p align="center">
 <h1 align="center"> Hackathon Timer<br>
 <a href="https://vinhack.hackerearth.com/">VinHack</a> - <a href="https://vinnovateit.com/">VinnovateIT</a></h1>
-<h2 align="center"> A timer for Hackathon with <a href="http://githublookbook.com/VinHack/">GitHub Live Updates</a>.<br> Made this for <a href="https://vinhack.hackerearth.com/">VinHack</a> - a hackathon by <a href="https://vinnovateit.com/">VinnovateIT</a></h2>
+<h2 align="center"> A timer for hackathons with <a href="http://githublookbook.com/VinHack/">GitHub Live Updates</a>.<br> Made for <a href="https://vinhack.hackerearth.com/">VinHack</a> - a hackathon by <a href="https://vinnovateit.com/">VinnovateIT</a></h2>
 
 <h3 align="center">About VinHack</h3>
 
-<p align="justify"><a href="https://vinhack.hackerearth.com/">VinHack</a> was a hackathon ogranized by <a href="https://vinnovateit.com/">VinnovateIT</a> at <a href="http://www.vit.ac.in/">VIT Vellore</a>. The organizing team was led by <a href="https://github.com/ShreyaAnand">Shreya Anand</a>, President of <a href="https://vinnovateit.com/">VinnovateIT</a>. I had honour of being a member of <a href="https://vinhack.hackerearth.com/challenges/hackathon/vinhack/judges/#judges">judge</a> panel. That was great experience for me. 
+<p align="justify"><a href="https://vinhack.hackerearth.com/">VinHack</a> was a hackathon organized by <a href="https://vinnovateit.com/">VinnovateIT</a> at <a href="http://www.vit.ac.in/">VIT Vellore</a>. The organizing team was led by <a href="https://github.com/ShreyaAnand">Shreya Anand</a>, president of <a href="https://vinnovateit.com/">VinnovateIT</a>. I had the honour of being a <a href="https://vinhack.hackerearth.com/challenges/hackathon/vinhack/judges/#judges">judging panel</a> member, which was a great experience for me. 
   
-My contribution includes :
+My contribution includes:
   
   <strong>
   <ul>
-    <li>Monitoring the development of <a href="https://vinnovateit.com/">website</a></li>
-    <li>Developed <a href="https://vinnovateit.github.io/VinHack/">go to place</a> for the participants</li>
-    <li>Created <a href="https://docs.google.com/presentation/d/1ewAEOn5QIVFbRP7Ap4JJst_PrfJu6nxCIn28AhWpoiU/edit?usp=sharing">quiz contest</a> for the participants</li>
-    <li>Made <a href="https://drive.google.com/file/d/140W1UBMBeuhdIZoxHa3xjUVNwkaa1Yzr/view?usp=sharing">problem statements</a></li>
+    <li>Monitoring the development of <a href="https://vinnovateit.com/">the hackaton's website</a></li>
+    <li>Developing a <a href="https://vinnovateit.github.io/VinHack/">go-to place</a> for the participants</li>
+    <li>Creating a <a href="https://docs.google.com/presentation/d/1ewAEOn5QIVFbRP7Ap4JJst_PrfJu6nxCIn28AhWpoiU/edit?usp=sharing">quiz contest</a> for the participants</li>
+    <li>Making <a href="https://drive.google.com/file/d/140W1UBMBeuhdIZoxHa3xjUVNwkaa1Yzr/view?usp=sharing">problem statements</a></li>
   </ul>
 </p></strong>
 
-This is basic timer which I've made for [VinHack](). It shows the notifications for the commits made on [VinnovateIT GitHub Organization](). This helps in boosting the energy of participants. If you're organizing a hackathon, you can use this! Just change the the url below with your organization's `url` and here you go!
+This is basic timer which I've made for [VinHack](). It shows notifications for the commits made on the [VinnovateIT GitHub Organization](). This helps in boosting the energy of participants. If you're organizing a hackathon, you can use this! Just change the the url below with your organization's `url` and here you go!
 
-### Check out the live demo [here](http://githublookbook.com/VinHack/)!
+##### Check out the live demo [here](http://githublookbook.com/VinHack/)!
 
 ### Quick Start
 
@@ -45,7 +45,7 @@ var settings = {
 
 ```
 
-and here you go!
+and there you go!
 
 > Learn more about [GitHub API](https://developer.github.com/v3/).
 
