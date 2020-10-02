@@ -1,7 +1,7 @@
 //var hackStart = new Date(2019, 1, 4, 8, 30, 0);
 //var hackEnd = new Date(2019, 1, 5, 8, 30, 0);
-var hackStart = moment([2019, 2, 20, 8, 30, 0]);
-var hackEnd = moment([2019, 8, 23, 8, 30, 0]);
+var hackStart = moment([2020, 10, 1, 8, 30, 0]);
+var hackEnd = moment([2020, 10, 31, 8, 30, 0]);
 
 function setDOMTime(hours, min, sec) {
   console.log('setting timer for: ', hours, min, sec);
