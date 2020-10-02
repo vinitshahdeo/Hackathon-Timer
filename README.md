@@ -23,7 +23,7 @@ My contribution includes :
 
 This is basic timer which I've made for [VinHack](). It shows the notifications for the commits made on [VinnovateIT GitHub Organization](). This helps in boosting the energy of participants. If you're organizing a hackathon, you can use this! Just change the the url below with your organization's `url` and here you go!
 
-### Check out the live demo [here](http://githublookbook.com/VinHack/)!
+### Check out the live demo [here](https://vinitshahdeo.github.io/Hackathon-Timer/)!
 
 ### Quick Start
 
